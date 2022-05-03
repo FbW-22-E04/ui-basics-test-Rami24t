@@ -4,18 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>UI-Basics Test</title>
 
     <style>
-      /* default style for test */
-      li {
-        margin-bottom: 10px;
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /*
+      * {
+      box-sizing: content-box; 
+      margin: 0; 
+      padding: 0; 
+      }
+           */
+      .header {
+        width: 100%;
+        background-color: cyan;
+        position: sticky;
+        top: 0px;
+        padding-bottom: 15px;
+      }
+      header h1 {
+        margin: 0;
+        padding: 0;
+      }
+      section.list > ul > li:nth-child(2) {
+        color: blue;
+      }
+      .image img {
+        display: block;
+        width: 100%;
+        /* height: 200px; */
+      }
+      .image {
+        float: left;
+      }
+      .image {
+        padding-left: 5px;
+        max-width: 24%;
+        /* min-width: 19%; */
+        /* height: 200px; */
+      }
+      img.tree {
+        border-radius: 50%;
+      }
+      .imageFloat {
+        float: none;
+        height: 200px;
+      }
+      .header3ILF {
+        color: rgb(255, 165, 0);
+        font-size: 2em;
+        /* font-variant-caps: all-petite-caps; */
+        font-variant-caps: all-small-caps;
+        float: none;
+      }
+      footer a:visited {
+        color: green;
+      }
+      footer a:hover {
+        color: red;
+      }
+      .box-model {
+        padding: 5px;
+        margin: 10%;
       }
     </style>
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1>UI-Basics: First Test</h1>
     </header>
 
@@ -32,28 +93,37 @@
 
       <!-- Images Section -->
       <section class="images">
-        <h3>Images Section</h3>
+        <h3 class="header3ILF">Images Section</h3>
         <div class="image">
           <img height="200" src="images/ocean.png" alt="Ocean" />
         </div>
-        <img height="200" src="images/mountain.jpg" alt="Mountain" />
-        <img height="200" src="images/surfer.jpg" alt="Surfer" />
+        <div class="image">
+          <img height="200" src="images/mountain.jpg" alt="Mountain" />
+        </div>
+        <div class="image">
+          <img height="200" src="images/surfer.jpg" alt="Surfer" />
+        </div>
+        <div class="image">
+          <a target="_blank" href="https://caseytrees.org/tree-species/"
+            ><img class="tree" height="200" src="./images/tree.jpg" alt="Tree"
+          /></a>
+        </div>
+        <div class="imageFloat"></div>
       </section>
 
       <!-- Link Section -->
       <section class="links">
-        <h3>Link Section</h3>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <h3>Footer Links</h3>
+        <h3 class="header3ILF">Link Section</h3>
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="http://cdn.collider.com/wp-content/uploads/2016/07/the-lord-of-the-rings-book-cover.jpg"
+              >Favourite book cover</a
+            >
+          </li>
         </ul>
-      </footer>
+      </section>
 
       <!-- Box Model Section -->
       <section class="box-model">
@@ -70,5 +140,14 @@
         <img height="200" src="images/valley.jpg" alt="Mountain Image" />
       </section>
     </main>
+    <!-- Footer -->
+    <footer>
+      <h3 class="header3ILF">Footer Links</h3>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
